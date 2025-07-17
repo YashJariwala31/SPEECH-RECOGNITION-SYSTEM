@@ -12,17 +12,23 @@ def transcribe_wav2vec2(audio_path):
 
     waveform, sample_rate = torchaudio.load(audio_path)
 
+    # Convert to mono if it's stereo
+    if waveform.shape[0] > 1:
+        waveform = waveform.mean(dim=0, keepdim=True)
+
+    # Resample to 16kHz if needed
     if sample_rate != 16000:
         print("Resampling audio to 16kHz...")
         resampler = torchaudio.transforms.Resample(orig_freq=sample_rate, new_freq=16000)
         waveform = resampler(waveform)
 
     print("Transcribing...")
-    input_values = processor(waveform.squeeze(), return_tensors="pt", sampling_rate=16000).input_values
+
+    input_values = processor(waveform.squeeze(0), return_tensors="pt", sampling_rate=16000).input_values
     with torch.no_grad():
         logits = model(input_values).logits
-    predicted_ids = torch.argmax(logits, dim=-1)
 
+    predicted_ids = torch.argmax(logits, dim=-1)
     transcription = processor.batch_decode(predicted_ids)[0]
     return transcription
 
