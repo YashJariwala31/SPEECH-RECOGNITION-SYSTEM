@@ -1,4 +1,18 @@
-# 🧠 Wav2Vec2 Speech-to-Text Transcriber
+# TEXT-SUMMARIZATION-TOOL
+
+*COMPANY*: CODTECH IT SOLUTIONS PVT.LTD
+
+*NAME*: Jariwala Yash J.
+
+*INTERN ID*: CT04DG2943
+
+*DOMAIN*: Artificial Intelligence
+
+*DURATION*: 4 WEEEKS
+
+*MENTOR*: NEELA SANTHOSH
+
+---
 
 This project converts speech audio files into text using Facebook AI's Wav2Vec2 model via HuggingFace. It supports both `.wav` and `.mp3` audio formats and runs entirely in the terminal without any GUI.
 
@@ -102,6 +116,5 @@ THE STALE SMELL OF OLD BEER LINGERS.
 
 ---
 
-## 📄 License
+#OUYPUT
 
-This project is licensed under the MIT License.
