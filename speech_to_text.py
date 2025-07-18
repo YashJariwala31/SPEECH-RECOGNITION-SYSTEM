@@ -43,6 +43,6 @@ def transcribe_wav2vec2(file_path):
 
 # Example usage
 if __name__ == "__main__":
-    file_path = "harvard.wav"  # Replace with "your_audio.mp3" to test mp3
+    file_path = "test.mp3"  # Replace with "your_audio.mp3" to test mp3
     transcription = transcribe_wav2vec2(file_path)
     print("Transcription:", transcription)
