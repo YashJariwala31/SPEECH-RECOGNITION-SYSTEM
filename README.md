@@ -116,5 +116,6 @@ THE STALE SMELL OF OLD BEER LINGERS.
 
 ---
 
-## OUYPUT
+## OUTPUT
 
+<img width="1563" height="410" alt="Image" src="https://github.com/user-attachments/assets/b9de82b4-ab1e-47ba-aea7-b0eed3905a7b" />
